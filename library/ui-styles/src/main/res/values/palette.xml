@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="UnusedResources">
 
-    <!--
-     Define all the colors used across the Element Android project
-     Source: https://www.figma.com/file/X4XTH9iS2KGJ2wFKDqkyed/Compound?node-id=1338%3A17947
-     Some colors are not used, but we want the palette to be complete so we ignore the lint error
-     UnusedResources for all the resources in this file
-    -->
-
     <!-- For all themes -->
     <color name="palette_azure">#368BD6</color>
     <color name="palette_kiwi">#74D12C</color>
@@ -16,7 +9,8 @@
     <color name="palette_polly">#E64F7A</color>
     <color name="palette_melon">#FF812D</color>
 
-    <color name="palette_element_green">#0DBD8B</color>
+    <!-- Remplacé par violet platine -->
+    <color name="palette_element_green">#AB8CDF</color>
     <color name="palette_element_orange">#D9B072</color>
     <color name="palette_white">#FFFFFF</color>
     <color name="palette_vermilion">#FF5B55</color>

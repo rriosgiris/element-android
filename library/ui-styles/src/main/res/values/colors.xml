@@ -23,7 +23,7 @@
     <!-- Other useful color -->
     <!-- Emoji text has to use a black text color -->
     <color name="emoji_color">@android:color/black</color>
-    <color name="join_conference_animated_color">#0BAC7E</color>
+    <color name="join_conference_animated_color">#AB8CDF</color>
 
     <color name="half_transparent_status_bar">#80000000</color>
 
@@ -100,9 +100,9 @@
     <color name="vctr_reaction_background_off_black">#22252B</color>
 
     <attr name="vctr_reaction_background_on" format="color" />
-    <color name="vctr_reaction_background_on_light">#2011BC8A</color>
-    <color name="vctr_reaction_background_on_dark">#4011BC8A</color>
-    <color name="vctr_reaction_background_on_black">#4011BC8A</color>
+    <color name="vctr_reaction_background_on_light">#20AB8CDF</color>
+    <color name="vctr_reaction_background_on_dark">#40AB8CDF</color>
+    <color name="vctr_reaction_background_on_black">#40AB8CDF</color>
 
     <!-- (color from RiotWeb) -->
     <attr name="vctr_keys_backup_banner_accent_color" format="color" />
