@@ -816,6 +816,17 @@ class TimelineFragment :
             menu.findItem(R.id.video_call).icon?.alpha = if (callButtonsEnabled) 0xFF else 0x40
             menu.findItem(R.id.voice_call).icon?.alpha = if (callButtonsEnabled || state.hasActiveElementCallWidget()) 0xFF else 0x40
 
+            // Change video call button icon and title for group calls (more than 2 members)
+            val membersCount = state.asyncRoomSummary.invoke()?.joinedMembersCount ?: 0
+            val videoCallItem = menu.findItem(R.id.video_call)
+            if (membersCount > 2) {
+                videoCallItem.icon = ContextCompat.getDrawable(requireContext(), R.drawable.ic_phone)
+                videoCallItem.title = getString(CommonStrings.action_voice_call)
+            } else {
+                videoCallItem.icon = ContextCompat.getDrawable(requireContext(), R.drawable.ic_video)
+                videoCallItem.title = getString(CommonStrings.action_video_call)
+            }
+
             val matrixAppsMenuItem = menu.findItem(R.id.open_matrix_apps)
             val widgetsCount = state.activeRoomWidgets.invoke()?.size ?: 0
             val hasOnlyJitsiWidget = widgetsCount == 1 && state.hasActiveJitsiWidget()
