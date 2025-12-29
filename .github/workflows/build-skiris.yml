@@ -29,11 +29,11 @@ jobs:
         with:
           cache-read-only: false
 
-      - name: Build Fdroid Debug APK
-        run: ./gradlew assembleFdroidDebug $CI_GRADLE_ARG_PROPERTIES
+      - name: Build Gplay Debug APK
+        run: ./gradlew assembleGplayDebug $CI_GRADLE_ARG_PROPERTIES
 
       - name: Upload Skiris APK
         uses: actions/upload-artifact@v4
         with:
           name: skiris-apk
-          path: vector-app/build/outputs/apk/fdroid/debug/vector-fdroid-universal-debug.apk
+          path: vector-app/build/outputs/apk/gplay/debug/vector-gplay-universal-debug.apk
