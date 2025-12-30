@@ -30,7 +30,7 @@ jobs:
           cache-read-only: false
 
       - name: Build Fdroid Debug APK
-        run: ./gradlew assembleFdroidDebug $CI_GRADLE_ARG_PROPERTIES
+        run: ./gradlew assembleFdroidDebug $CI_GRADLE_ARG_PROPERTIES --info
 
       - name: Upload Skiris APK
         uses: actions/upload-artifact@v4
