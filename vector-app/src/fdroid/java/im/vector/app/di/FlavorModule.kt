@@ -23,6 +23,7 @@ import im.vector.app.fdroid.service.FDroidGuardServiceStarter
 import im.vector.app.features.home.NightlyProxy
 import im.vector.app.features.settings.VectorPreferences
 import im.vector.app.features.settings.legals.FlavorLegals
+import im.vector.app.nightly.GithubUpdateProxy
 import im.vector.app.push.fcm.FdroidFcmHelper
 
 @InstallIn(SingletonComponent::class)
@@ -36,10 +37,8 @@ abstract class FlavorModule {
         }
 
         @Provides
-        fun provideNightlyProxy() = object : NightlyProxy {
-            override fun canDisplayPopup() = false
-            override fun isNightlyBuild() = false
-            override fun updateApplication() = Unit
+        fun provideNightlyProxy(githubUpdateProxy: GithubUpdateProxy): NightlyProxy {
+            return githubUpdateProxy
         }
 
         @Provides

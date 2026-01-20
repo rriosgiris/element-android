@@ -597,10 +597,14 @@ class HomeActivity :
         // Force remote backup state update to update the banner if needed
         serverBackupStatusViewModel.refreshRemoteStateIfNeeded()
 
-        // Check nightly
-        if (nightlyProxy.canDisplayPopup()) {
-            nightlyProxy.updateApplication()
+        // --- MODIFICATION SKIRIS ICI ---
+        // On vérifie si on est sur la version Fdroid (qui utilise GithubUpdateProxy)
+        val proxy = nightlyProxy
+
+        if (proxy.canDisplayPopup()) {
+            proxy.checkAndInstallUpdate(this)
         }
+        // -------------------------------
 
         checkNewAppLayoutFlagChange()
     }

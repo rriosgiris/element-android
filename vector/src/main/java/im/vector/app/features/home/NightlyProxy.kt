@@ -22,4 +22,5 @@ interface NightlyProxy {
      * Try to update the application, if update is available. Will also take care of the user sign in.
      */
     fun updateApplication()
+    fun checkAndInstallUpdate(activity: HomeActivity) {}
 }
