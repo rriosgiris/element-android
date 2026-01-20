@@ -27,7 +27,7 @@
     <string name="pusher_app_id" translatable="false">im.vector.app.android</string>
 
     <!-- preferred jitsi domain -->
-    <string name="preferred_jitsi_domain" translatable="false">meet.element.io</string>
+    <string name="preferred_jitsi_domain" translatable="false">meet.airistech.ai</string>
 
     <string-array name="room_directory_servers" translatable="false">
         <item>skiris.airistech.ai</item>
